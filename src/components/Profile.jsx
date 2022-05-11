@@ -116,7 +116,7 @@ export const Profile = () => {
             alt='Luciano Leyria'
             cursor='pointer'
             onClick={(e) => {
-              window.open('https://myecommercee.netlify.app/', '_blank');
+              window.open('https://app.netlify.com/sites/citaspet', '_blank');
             }}
           ></Image>
           <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mt={8}></Flex>

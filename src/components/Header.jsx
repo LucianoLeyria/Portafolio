@@ -48,7 +48,7 @@ export const Header = () => {
             Programador Full Stack 💻
           </Text>
           <Button mt={8} colorScheme='blue' onClick={handleAlert}>
-            ¿Porque yo?
+            ¿Por qué yo?
           </Button>
         </Box>
         <Image

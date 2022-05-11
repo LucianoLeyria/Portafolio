@@ -8,6 +8,7 @@ import {
   Divider,
   Box,
   Image,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import React, { useRef, useState, useEffect } from 'react';
 
@@ -16,7 +17,7 @@ import { skillsArray } from '../data/data';
 export const Tecnologies = () => {
   console.log('skilladentro??', skillsArray);
   const { colorMode, toggleColorMode } = useColorMode();
-
+  const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
   const current = useRef(skillsArray);
   console.log('current?', current);
 
@@ -39,7 +40,14 @@ export const Tecnologies = () => {
       </Text>
       <HStack>
         <Box>
-          <Flex width={980} m={19} columnGap='25px' rowGap={5} flexWrap='wrap'>
+          <Flex
+            direction={isNotSmallerScreen ? 'row' : 'column'}
+            width={980}
+            m={19}
+            columnGap='25px'
+            rowGap={5}
+            flexWrap='wrap'
+          >
             {current.current?.map((t, index) => {
               return (
                 <Box key={index}>
