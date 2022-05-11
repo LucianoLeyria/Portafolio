@@ -37,6 +37,7 @@ export const Contact = () => {
               isRound={true}
               // onClick={(e) => sendMail(e)}
               href='mailto:luciano.leyria96@gmail.com'
+              isExternal
             ></IconButton>
           </Flex>
         </Box>
