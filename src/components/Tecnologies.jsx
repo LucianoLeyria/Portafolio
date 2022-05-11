@@ -10,7 +10,7 @@ import {
   Image,
   useMediaQuery,
 } from '@chakra-ui/react';
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 
 import { skillsArray } from '../data/data';
 

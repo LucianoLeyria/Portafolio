@@ -90,6 +90,8 @@
   position: relative;
   width: 96px;
   height: 96px;
+  left: 600px;
+  margin-top: 300px;
   transform: rotate(45deg);
 }
 
