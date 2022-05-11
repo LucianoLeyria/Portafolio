@@ -52,11 +52,13 @@ export const Header = () => {
           </Button>
         </Box>
         <Image
-          ml={50}
+          ml={isNotSmallerScreen ? '20' : '0'}
+          mt={isNotSmallerScreen ? '0' : '16'}
           alignSelf='center'
-          mt={isNotSmallerScreen ? '0' : '12'}
-          mb={isNotSmallerScreen ? '0' : '12'}
+          // mt={isNotSmallerScreen ? '0' : '12'}
+          // mb={isNotSmallerScreen ? '0' : '12'}
           borderRadius='full'
+          border='3px solid lightblue'
           src={Cara}
         />
       </Flex>

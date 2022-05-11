@@ -21,10 +21,6 @@ export const Tecnologies = () => {
   const current = useRef(skillsArray);
   console.log('current?', current);
 
-  // useEffect(() => {
-  //   current;
-  // }, []);
-
   return (
     <>
       <Stack id='technologies' direction='column' h='80px' w='900px' p={4}>
@@ -41,11 +37,12 @@ export const Tecnologies = () => {
       <HStack>
         <Box>
           <Flex
-            direction={isNotSmallerScreen ? 'row' : 'column'}
-            width={980}
+            width='100%'
+            maxWidth='1000px'
+            minWidth='300px'
+            rowGap={5}
             m={19}
             columnGap='25px'
-            rowGap={5}
             flexWrap='wrap'
           >
             {current.current?.map((t, index) => {

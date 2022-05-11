@@ -6,10 +6,10 @@ export const Imagen = () => {
   return (
     <div>
       <Image
-        borderRadius="full"
-        boxSize="150px"
+        borderRadius='full'
+        boxSize='150px'
         src={Cara}
-        alt="Luciano Leyria"
+        alt='Luciano Leyria'
       />
     </div>
   );

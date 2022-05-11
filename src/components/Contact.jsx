@@ -1,11 +1,22 @@
-import { Stack, IconButton, Divider, Flex, Box, Text } from '@chakra-ui/react';
+import {
+  Stack,
+  IconButton,
+  Divider,
+  Flex,
+  Box,
+  Text,
+  useMediaQuery,
+  Link,
+} from '@chakra-ui/react';
 import React from 'react';
 import { FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 export const Contact = () => {
-  const sendMail = (e) => {
-    window.location = 'mailto:yourmail@domain.com';
-  };
+  const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
+
+  // const sendMail = (e) => {
+  //   window.location.href = 'mailto:luciano.leyria96@gmail.com';
+  // };
 
   return (
     <>
@@ -16,22 +27,16 @@ export const Contact = () => {
         <Text mt={3} fontWeight='bold' fontSize='sm'>
           © {new Date().getFullYear()} Luciano Leyria{' '}
         </Text>
-        <Box ml={800}>
+        <Box>
           <Flex>
             <IconButton
-              ml={3}
-              icon={<FaTwitter />}
-              isRound={true}
-              onClick={() => {
-                window.open('https://twitter.com/Luchinike');
-              }}
-            ></IconButton>
-            <IconButton
+              as={Link}
               mb={2}
               ml={3}
               icon={<FaEnvelope />}
               isRound={true}
-              onClick={(e) => sendMail(e)}
+              // onClick={(e) => sendMail(e)}
+              href='mailto:luciano.leyria96@gmail.com'
             ></IconButton>
           </Flex>
         </Box>
