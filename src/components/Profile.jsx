@@ -68,7 +68,7 @@ export const Profile = () => {
             alt='Luciano Leyria'
             cursor='pointer'
             onClick={(e) => {
-              window.open('https:soyhostel.com', '_blank');
+              window.open('https://soyhostel.com', '_blank');
             }}
           ></Image>
           <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mt={8}></Flex>
