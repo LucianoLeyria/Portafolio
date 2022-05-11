@@ -27,10 +27,11 @@ export const Tecnologies = () => {
         <Divider orientation='horizontal' />
       </Stack>
       <Text
-        fontSize='5xl'
+        // fontSize='5xl'
         fontWeight='bold'
         bgGradient='linear(to-r, cyan.400, blue.500, purple.600)'
         bgClip='text'
+        fontSize={isNotSmallerScreen ? '50' : '30'}
       >
         Las tecnologías que conozco y utilizo son las siguientes
       </Text>
@@ -40,8 +41,9 @@ export const Tecnologies = () => {
             width='100%'
             maxWidth='1000px'
             minWidth='300px'
+            mb={100}
+            justifyContent={isNotSmallerScreen ? '' : 'center'}
             rowGap={5}
-            m={19}
             columnGap='25px'
             flexWrap='wrap'
           >

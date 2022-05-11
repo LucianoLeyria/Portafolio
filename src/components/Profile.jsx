@@ -26,7 +26,7 @@ export const Profile = () => {
         minWidth='300px'
       >
         <Text
-          fontSize='6xl'
+          fontSize={isNotSmallerScreen ? '70' : '40'}
           fontWeight='bold'
           bgGradient='linear(to-r, cyan.400, blue.500, purple.600)'
           bgClip='text'
@@ -51,7 +51,11 @@ export const Profile = () => {
           justifyContent='space-between'
           direction={isNotSmallerScreen ? 'row' : 'column'}
         >
-          <Box alignSelf='center' padding={isNotSmallerScreen ? '90' : '10px'}>
+          <Box
+            mt={20}
+            alignSelf='center'
+            padding={isNotSmallerScreen ? '90' : '10px'}
+          >
             <Heading fontWeight='extrabold' color='cyan.500'>
               Videogames web
             </Heading>
@@ -75,7 +79,7 @@ export const Profile = () => {
               border='2px solid black'
               borderRadius='8px'
               cursor='pointer'
-              _hover={{ transform: 'scale(1.2)', transition: 'all 0.5s ease' }}
+              _hover={{ transform: 'scale(1.1)', transition: 'all 0.5s ease' }}
               alt='Luciano Leyria'
               src={videogames}
               onClick={(e) => {
@@ -109,7 +113,7 @@ export const Profile = () => {
               border='2px solid black'
               borderRadius='8px'
               cursor='pointer'
-              _hover={{ transform: 'scale(1.2)', transition: 'all 0.5s ease' }}
+              _hover={{ transform: 'scale(1.1)', transition: 'all 0.5s ease' }}
               alt='Luciano Leyria'
               src={hostel}
               onClick={(e) => {
@@ -158,7 +162,7 @@ export const Profile = () => {
               border='2px solid black'
               borderRadius='8px'
               cursor='pointer'
-              _hover={{ transform: 'scale(1.2)', transition: 'all 0.5s ease' }}
+              _hover={{ transform: 'scale(1.1)', transition: 'all 0.5s ease' }}
               alt='Luciano Leyria'
               src={zapas}
               onClick={(e) => {
@@ -191,7 +195,7 @@ export const Profile = () => {
               border='2px solid black'
               borderRadius='8px'
               cursor='pointer'
-              _hover={{ transform: 'scale(1.2)', transition: 'all 0.5s ease' }}
+              _hover={{ transform: 'scale(1.1)', transition: 'all 0.5s ease' }}
               alt='Luciano Leyria'
               src={veterinario}
               onClick={(e) => {

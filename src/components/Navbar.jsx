@@ -22,11 +22,6 @@ export const Navbar = () => {
       <BreadcrumbItem>
         <BreadcrumbLink href='#proyectos'>Proyectos</BreadcrumbLink>
       </BreadcrumbItem>
-      <BreadcrumbItem isCurrentPage>
-        <BreadcrumbLink href='#contact' onClick={godown}>
-          Contacto
-        </BreadcrumbLink>
-      </BreadcrumbItem>
     </Breadcrumb>
   );
 };

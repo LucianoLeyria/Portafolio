@@ -20,7 +20,7 @@ export const Header = () => {
 
   const handleAlert = () => {
     swal(
-      'Soy una persona muy responsable, dínamico y creativo, me comprometo mucho cuando hay que solucionar problemas, en el trabajo en equipo me gusta aportar ideas e intercambiar opiniones con los compañeros. Dispuesto a aprender diferentes tecnologías'
+      'Soy una persona muy responsable, dínamico y creativo, me comprometo mucho cuando hay que solucionar problemas 💻, en el trabajo en equipo me gusta aportar ideas e intercambiar opiniones con los compañeros. Dispuesto a aprender diferentes tecnologías'
     );
   };
 
