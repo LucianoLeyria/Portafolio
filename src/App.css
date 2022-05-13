@@ -30,6 +30,20 @@ body {
   color: white;
 }
 
+.swal-text {
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(58, 50, 50);
+}
+
+.swal-button--confirm {
+  background-color: rgb(17, 113, 190);
+}
+
+.swal-button--confirm:hover {
+  background-color: rgb(4, 33, 56) !important;
+}
+
 .App-link {
   color: #61dafb;
 }
