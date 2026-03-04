@@ -1,9 +1,9 @@
 {
-  "name": "package",
+  "name": "mi-portafolio",
   "private": true,
   "version": "0.0.0",
   "engines": {
-    "node": "24.x"
+    "node": "20.x"
   },
   "scripts": {
     "dev": "vite",
