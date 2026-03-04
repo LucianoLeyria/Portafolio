@@ -6,10 +6,10 @@
     "node": "20.x"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "npx vite build",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@chakra-ui/icon": "^2.0.5",
     "@chakra-ui/layout": "^1.8.0",
