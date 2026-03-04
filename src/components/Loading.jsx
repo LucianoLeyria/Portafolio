@@ -3,16 +3,17 @@ import '../components/css/Loading.css';
 
 export const Loading = () => {
   return (
-    <div>
-      <div class='loader'>
-        <div class='loader-square'></div>
-        <div class='loader-square'></div>
-        <div class='loader-square'></div>
-        <div class='loader-square'></div>
-        <div class='loader-square'></div>
-        <div class='loader-square'></div>
-        <div class='loader-square'></div>
+    <div className='loader-overlay'>
+      <div className='loader'>
+        <div className='loader-square'></div>
+        <div className='loader-square'></div>
+        <div className='loader-square'></div>
+        <div className='loader-square'></div>
+        <div className='loader-square'></div>
+        <div className='loader-square'></div>
+        <div className='loader-square'></div>
       </div>
+      <p className='loader-label'>Cargando...</p>
     </div>
   );
 };

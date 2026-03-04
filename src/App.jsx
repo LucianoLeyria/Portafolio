@@ -1,21 +1,5 @@
 import './App.css';
-import { Spacer, useColorMode } from '@chakra-ui/react';
-import {
-  VStack,
-  Flex,
-  IconButton,
-  Box,
-  Heading,
-  useMediaQuery,
-} from '@chakra-ui/react';
-import {
-  FaSun,
-  FaMoon,
-  FaInstagram,
-  FaGithub,
-  FaTwitter,
-  FaLinkedin,
-} from 'react-icons/fa';
+import { useColorMode } from '@chakra-ui/react';
 import { Header } from './components/Header';
 import { Profile } from './components/Profile';
 import { Tecnologies } from './components/Tecnologies';
@@ -28,105 +12,38 @@ import { useEffect, useState } from 'react';
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === 'dark';
-  const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, [isLoading]);
+    const timer = setTimeout(() => setIsLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  console.log('load?', Loading);
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
-    <>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <Box>
-          <Flex>
-            <Box
-              className='App'
-              textAlign='center'
-              fontSize='xl'
-              w={'100%'}
-              maxW={1300}
-              mx='auto'
-            >
-              <VStack padding={5}>
-                <Flex
-                  width='100%'
-                  direction={isNotSmallerScreen ? 'row' : 'column'}
-                  flexWrap='wrap'
-                >
-                  <Navbar />
-                  <Heading
-                    ml='8'
-                    size='md'
-                    fontWeight='semibold'
-                    color='cyan.400'
-                  ></Heading>
-                  <Spacer></Spacer>
-
-                  <Box
-                    direction={isNotSmallerScreen ? 'row' : 'column'}
-                    minWidth={isNotSmallerScreen ? '500' : '300'}
-                  >
-                    <IconButton
-                      ml={2}
-                      icon={<FaGithub />}
-                      isRound={true}
-                      onClick={() =>
-                        window.open('https://github.com/LucianoLeyria')
-                      }
-                    ></IconButton>
-                    <IconButton
-                      ml={2}
-                      icon={<FaLinkedin />}
-                      isRound={true}
-                      onClick={() =>
-                        window.open(
-                          'https://www.linkedin.com/in/Lucianoleyria/'
-                        )
-                      }
-                    ></IconButton>
-                    <IconButton
-                      ml={2}
-                      icon={<FaInstagram />}
-                      isRound={true}
-                      onClick={() =>
-                        window.open('https://www.instagram.com/lucholeyria/')
-                      }
-                    ></IconButton>
-
-                    <IconButton
-                      ml={3}
-                      icon={<FaTwitter />}
-                      isRound={true}
-                      onClick={() => {
-                        window.open('https://twitter.com/Luchinike');
-                      }}
-                    ></IconButton>
-                    <IconButton
-                      ml={20}
-                      icon={isDark ? <FaSun /> : <FaMoon />}
-                      isRound={true}
-                      onClick={toggleColorMode}
-                    ></IconButton>
-                  </Box>
-                </Flex>
-                <Header></Header>
-                <Tecnologies />
-                <Profile></Profile>
-
-                <Contact></Contact>
-              </VStack>
-            </Box>
-          </Flex>
-          <BackToTopButton />
-        </Box>
-      )}
-    </>
+    <div
+      style={{
+        minHeight: '100vh',
+        background: isDark
+          ? 'radial-gradient(ellipse 80% 80% at 50% -20%, rgba(34,211,238,0.06) 0%, transparent 60%), #0d0f1a'
+          : 'radial-gradient(ellipse 80% 80% at 50% -20%, rgba(34,211,238,0.05) 0%, transparent 60%), #f8fafc',
+        color: isDark ? '#f1f5f9' : '#0f172a',
+        fontFamily: "'Inter', sans-serif",
+        transition: 'background 0.3s ease, color 0.3s ease',
+      }}
+    >
+      <Navbar isDark={isDark} toggleColorMode={toggleColorMode} />
+      <main>
+        <Header />
+        <Tecnologies />
+        <Profile />
+        <Contact />
+      </main>
+      <BackToTopButton />
+    </div>
   );
 }
 
