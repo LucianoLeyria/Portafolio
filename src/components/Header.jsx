@@ -11,7 +11,7 @@ import {
 
 export const Header = () => {
   const { colorMode } = useColorMode();
-  const isDark = colorMode === 'dark';
+  const isDark = true; // portfolio dark-only
   const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
   const [visible, setVisible] = useState(false);
 

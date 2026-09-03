@@ -47,7 +47,7 @@ const projects = [
 
 export const Profile = () => {
   const { colorMode } = useColorMode();
-  const isDark = colorMode === 'dark';
+  const isDark = true; // portfolio dark-only
   const [isNotSmallerScreen] = useMediaQuery('(min-width:680px)');
 
   return (

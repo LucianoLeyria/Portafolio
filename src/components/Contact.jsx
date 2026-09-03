@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaEnvelope } from 'react-
 
 export const Contact = () => {
   const { colorMode } = useColorMode();
-  const isDark = colorMode === 'dark';
+  const isDark = true; // portfolio dark-only
   const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
 
   const socialLinks = [

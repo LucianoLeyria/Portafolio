@@ -4,7 +4,7 @@ import { skillsArray } from '../data/data';
 
 export const Tecnologies = () => {
   const { colorMode } = useColorMode();
-  const isDark = colorMode === 'dark';
+  const isDark = true; // portfolio dark-only
   const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
 
   return (
