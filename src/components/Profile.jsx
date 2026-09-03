@@ -2,38 +2,46 @@ import React from 'react';
 import { useColorMode, useMediaQuery } from '@chakra-ui/react';
 import videogames from '../pngs/videogames.png';
 import hostel from '../pngs/hostel.png';
-import zapas from '../pngs/zapas.png';
-import veterinario from '../pngs/veterinario.png';
+import taskflow from '../pngs/taskflow.png';
+import linknest from '../pngs/linknest.png';
+import gastos from '../pngs/gastos.png';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const projects = [
   {
     title: 'Videogames Web',
-    description: 'Página web donde podrás crear, buscar, filtrar y ver detalles de los videojuegos.',
+    description: 'Catálogo de videojuegos: buscá, filtrá por género y mirá el detalle de cada juego. Datos en vivo desde la API de FreeToGame.',
     image: videogames,
-    url: 'https://frontpi.herokuapp.com/',
-    tags: ['React', 'Node.js', 'PostgreSQL'],
+    url: 'https://lucianoleyria.github.io/videogames-web/',
+    tags: ['React', 'Node.js', 'API REST'],
   },
   {
     title: 'SoyHostel',
-    description: 'Página web donde podrás llevar a cabo la gestión completa de un Hostel.',
+    description: 'Landing y sistema de gestión para un hostel: reservas, habitaciones y contacto. Proyecto full-stack recuperado y puesto en línea.',
     image: hostel,
-    url: 'https://soyhostel.com',
+    url: 'https://lucianoleyria.github.io/pf-hostel/',
     tags: ['React', 'Node.js', 'SQL'],
   },
   {
-    title: 'E-commerce Zapatillas',
-    description: 'Tienda online estilo e-commerce donde podés comprar zapatillas.',
-    image: zapas,
-    url: 'https://myecommercee.netlify.app/',
-    tags: ['React', 'JavaScript', 'CSS'],
+    title: 'TaskFlow',
+    description: 'Gestor de tareas tipo Kanban: creá tareas y movelas entre columnas (Por hacer, En progreso, Hecho). Persistencia vía API REST.',
+    image: taskflow,
+    url: 'https://lucianoleyria.github.io/taskflow/',
+    tags: ['React', 'Node.js', 'Express'],
   },
   {
-    title: 'Turnos Veterinario',
-    description: 'Solicitá turnos para tu mascota de forma rápida y sencilla.',
-    image: veterinario,
-    url: 'https://citaspet.netlify.app/',
-    tags: ['React', 'Node.js'],
+    title: 'LinkNest',
+    description: 'Acortador de URLs con estadísticas de clicks. Generá códigos cortos (o personalizados) y medí cuántas veces se abrió cada link.',
+    image: linknest,
+    url: 'https://lucianoleyria.github.io/linknest/',
+    tags: ['React', 'Node.js', 'Express'],
+  },
+  {
+    title: 'GastosApp',
+    description: 'App mobile para registrar gastos diarios con total y desglose por categoría en tiempo real. React Native (Expo) + backend Node.',
+    image: gastos,
+    url: 'https://lucianoleyria.github.io/gastos-app/',
+    tags: ['React Native', 'Expo', 'Node.js'],
   },
 ];
 
@@ -89,7 +97,7 @@ export const Profile = () => {
           maxWidth: '48ch',
           lineHeight: 1.7,
         }}>
-          Una selección de proyectos en los que trabajé, desde web apps hasta e-commerce.
+          Una selección de proyectos full-stack en los que trabajé, desde apps web con React y Node hasta una app mobile con React Native.
         </p>
       </div>
 
