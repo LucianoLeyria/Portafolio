@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useColorMode, useMediaQuery } from '@chakra-ui/react';
 import Cara from '../pngs/cara.png';
-import swal from 'sweetalert';
+import { AboutModal } from './AboutModal';
 import {
   FaGithub,
   FaLinkedin,
@@ -14,17 +14,14 @@ export const Header = () => {
   const isDark = true; // portfolio dark-only
   const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
   const [visible, setVisible] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
-  const handleAlert = () => {
-    swal(
-      'Soy una persona muy responsable, dinámico y creativo, me comprometo mucho cuando hay que solucionar problemas 💻, en el trabajo en equipo me gusta aportar ideas e intercambiar opiniones con los compañeros. Dispuesto a aprender diferentes tecnologías.'
-    );
-  };
+  const handleAlert = () => setAboutOpen(true);
 
   const socialLinks = [
     { Icon: FaLinkedin, url: 'https://www.linkedin.com/in/Lucianoleyria/', label: 'LinkedIn' },
@@ -231,6 +228,8 @@ export const Header = () => {
           />
         </div>
       </div>
+
+      <AboutModal open={aboutOpen} onClose={() => setAboutOpen(false)} />
     </section>
   );
 };
