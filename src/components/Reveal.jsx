@@ -8,7 +8,11 @@ export const Reveal = ({ children, delay = 0, y = 28 }) => {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+    // Sin soporte de IO o con motion reducido: mostrar directo.
+    if (
+      typeof IntersectionObserver === 'undefined' ||
+      window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    ) {
       setShown(true);
       return;
     }
@@ -22,7 +26,13 @@ export const Reveal = ({ children, delay = 0, y = 28 }) => {
       { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
     );
     io.observe(el);
-    return () => io.disconnect();
+    // Red de seguridad: si por alguna razón el observer no dispara,
+    // el contenido igual se muestra (nunca queda invisible).
+    const safety = setTimeout(() => setShown(true), 4000);
+    return () => {
+      io.disconnect();
+      clearTimeout(safety);
+    };
   }, []);
 
   return (
