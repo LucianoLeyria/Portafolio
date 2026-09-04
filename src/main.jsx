@@ -17,8 +17,12 @@ const theme = extendTheme({
   },
   styles: {
     global: {
-      'html, body, #root': {
-        background: '#0d0f1a',
+      'html, body': {
+        background: '#08090f',
+        color: '#f1f5f9',
+        fontFamily: "'Inter', sans-serif",
+      },
+      '#root': {
         color: '#f1f5f9',
         fontFamily: "'Inter', sans-serif",
       },
