@@ -64,15 +64,15 @@ export const Profile = () => {
       <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
         <span style={{
           display: 'inline-block',
-          background: 'rgba(168, 85, 247, 0.1)',
-          border: '1px solid rgba(168, 85, 247, 0.25)',
+          background: 'rgba(34, 211, 238, 0.1)',
+          border: '1px solid rgba(34, 211, 238, 0.25)',
           borderRadius: '100px',
           padding: '5px 16px',
           fontSize: '0.75rem',
           fontWeight: 600,
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
-          color: '#a855f7',
+          color: '#22d3ee',
           marginBottom: '1rem',
         }}>
           Portfolio
@@ -82,10 +82,7 @@ export const Profile = () => {
           fontSize: isNotSmallerScreen ? 'clamp(2rem, 4vw, 3rem)' : '1.75rem',
           fontWeight: 800,
           letterSpacing: '-0.02em',
-          background: 'linear-gradient(135deg, #22d3ee, #3b82f6, #a855f7)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
+          color: '#f1f5f9',
           lineHeight: 1.2,
         }}>
           Mis Proyectos
@@ -125,14 +122,14 @@ const ProjectCard = ({ project, isDark }) => {
       style={{
         background: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
         border: `1px solid ${hovered
-          ? 'rgba(168, 85, 247, 0.4)'
+          ? 'rgba(34, 211, 238, 0.4)'
           : isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.09)'}`,
         borderRadius: '20px',
         overflow: 'hidden',
         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
         boxShadow: hovered
-          ? '0 20px 60px rgba(168, 85, 247, 0.15)'
+          ? '0 20px 60px rgba(34, 211, 238, 0.15)'
           : '0 2px 12px rgba(0,0,0,0.1)',
         cursor: 'pointer',
       }}
@@ -170,7 +167,7 @@ const ProjectCard = ({ project, isDark }) => {
             color: 'white',
             fontSize: '0.8rem',
             fontWeight: 600,
-            background: 'rgba(168, 85, 247, 0.8)',
+            background: 'rgba(34, 211, 238, 0.8)',
             padding: '6px 12px',
             borderRadius: '8px',
             backdropFilter: 'blur(8px)',
@@ -205,12 +202,12 @@ const ProjectCard = ({ project, isDark }) => {
           {project.tags.map((tag) => (
             <span key={tag} style={{
               padding: '3px 10px',
-              background: isDark ? 'rgba(168, 85, 247, 0.1)' : 'rgba(168, 85, 247, 0.08)',
-              border: '1px solid rgba(168, 85, 247, 0.2)',
+              background: isDark ? 'rgba(34, 211, 238, 0.1)' : 'rgba(34, 211, 238, 0.08)',
+              border: '1px solid rgba(34, 211, 238, 0.2)',
               borderRadius: '100px',
               fontSize: '0.72rem',
               fontWeight: 600,
-              color: '#a855f7',
+              color: '#22d3ee',
               letterSpacing: '0.02em',
             }}>
               {tag}

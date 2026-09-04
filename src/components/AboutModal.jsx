@@ -66,7 +66,7 @@ export const AboutModal = ({ open, onClose }) => {
           position: 'absolute',
           top: 0, left: '10%', right: '10%',
           height: '1px',
-          background: 'linear-gradient(90deg, transparent, rgba(34,211,238,0.6), rgba(168,85,247,0.6), transparent)',
+          background: 'linear-gradient(90deg, transparent, rgba(34,211,238,0.7), transparent)',
         }} />
 
         {/* Botón cerrar */}
@@ -118,10 +118,7 @@ export const AboutModal = ({ open, onClose }) => {
           fontSize: '1.6rem',
           fontWeight: 800,
           letterSpacing: '-0.02em',
-          background: 'linear-gradient(135deg, #22d3ee, #3b82f6, #a855f7)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
+          color: '#f1f5f9',
         }}>
           ¿Por qué yo?
         </h3>

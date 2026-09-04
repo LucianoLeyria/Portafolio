@@ -40,10 +40,7 @@ export const Tecnologies = () => {
           fontSize: isNotSmallerScreen ? 'clamp(2rem, 4vw, 3rem)' : '1.75rem',
           fontWeight: 800,
           letterSpacing: '-0.02em',
-          background: 'linear-gradient(135deg, #22d3ee, #3b82f6, #a855f7)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
+          color: '#f1f5f9',
           lineHeight: 1.2,
         }}>
           Tecnologías que utilizo

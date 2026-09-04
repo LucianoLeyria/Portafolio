@@ -12,7 +12,7 @@ const theme = extendTheme({
   // La fuente y el fondo base se definen acá para que Chakra no los pise:
   // sin esto, Chakra aplica su reset (fuente del sistema + gris #1A202C).
   fonts: {
-    heading: "'Inter', sans-serif",
+    heading: "'Space Grotesk', 'Inter', sans-serif",
     body: "'Inter', sans-serif",
   },
   styles: {

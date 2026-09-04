@@ -38,10 +38,7 @@ export const Contact = () => {
             margin: '0 0 0.25rem',
             fontWeight: 700,
             fontSize: '1.1rem',
-            background: 'linear-gradient(135deg, #22d3ee, #3b82f6)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
+            color: '#22d3ee',
           }}>
             Luciano Leyría
           </p>

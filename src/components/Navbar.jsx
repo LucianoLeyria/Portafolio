@@ -38,13 +38,11 @@ export const Navbar = () => {
     }}>
       {/* Logo */}
       <a href="#inicio" style={{
-        fontWeight: 800,
-        fontSize: '1.25rem',
-        background: 'linear-gradient(135deg, #22d3ee, #3b82f6, #a855f7)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
-        letterSpacing: '-0.02em',
+        fontFamily: "'Space Grotesk', sans-serif",
+        fontWeight: 700,
+        fontSize: '1.3rem',
+        color: '#22d3ee',
+        letterSpacing: '0.02em',
         textDecoration: 'none',
       }}>
         LL
